@@ -20,9 +20,7 @@ import LoadingAnim from '@/app/components/app/chat/loading-anim'
 import Citation from '@/app/components/app/chat/citation'
 import { EditTitle } from '@/app/components/app/annotation/edit-annotation-modal/edit-item'
 import type { Emoji } from '@/app/components/tools/types'
-
-// 确保正确导入图片
-import CustomIcon from '@/app/components/app/create-app-modal/robot-logo.png'
+import { Robot, User } from '@/app/components/base/icons/src/public/avatar'
 
 type AnswerProps = {
   item: ChatItem
@@ -89,7 +87,7 @@ const Answer: FC<AnswerProps> = ({
         {
           answerIcon || (
             <div className='flex items-center justify-center w-full h-full rounded-full bg-[#d5f5f6] border-[0.5px] border-black/5 text-xl'>
-              <img src={CustomIcon} alt="Custom Icon" className='w-full h-full rounded-full' />
+              <Robot />
             </div>
           )
         }
