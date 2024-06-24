@@ -86,7 +86,7 @@ const Answer: FC<AnswerProps> = ({
       <div className='shrink-0 relative w-10 h-10'>
         {
           answerIcon || (
-            <div className='flex items-center justify-center w-full h-full rounded-full bg-[#d5f5f6] border-[0.5px] border-black/5 text-xl'>
+            <div className='flex items-center justify-center w-full h-full rounded-full bg-white border-[0.5px] border-black/5 text-xl'>
               <LogoAvatar />
             </div>
           )
