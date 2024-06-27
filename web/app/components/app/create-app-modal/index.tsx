@@ -22,6 +22,7 @@ import { Route } from '@/app/components/base/icons/src/vender/solid/mapsAndTrave
 import TooltipPlus from '@/app/components/base/tooltip-plus'
 import { NEED_REFRESH_APP_LIST_KEY } from '@/config'
 import { getRedirection } from '@/utils/app-redirection'
+import LogoAvatar from '@/app/components/base/logo/logo-embeded-chat-avatar';
 
 type CreateAppDialogProps = {
   show: boolean
@@ -37,7 +38,7 @@ const CreateAppModal = ({ show, onSuccess, onClose }: CreateAppDialogProps) => {
 
   const [appMode, setAppMode] = useState<AppMode>('chat')
   const [showChatBotType, setShowChatBotType] = useState<boolean>(true)
-  const [emoji, setEmoji] = useState({ icon: '🤖', icon_background: '#FFEAD5' })
+  const [emoji, setEmoji] = useState({ icon: <LogoAvatar />, icon_background: 'transparent' })
   const [showEmojiPicker, setShowEmojiPicker] = useState(false)
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
@@ -281,7 +282,7 @@ const CreateAppModal = ({ show, onSuccess, onClose }: CreateAppDialogProps) => {
             setShowEmojiPicker(false)
           }}
           onClose={() => {
-            setEmoji({ icon: '🤖', icon_background: '#FFEAD5' })
+            setEmoji({ icon: <LogoAvatar />, icon_background: 'transparent' })
             setShowEmojiPicker(false)
           }}
         />}
