@@ -22,6 +22,7 @@ import Citation from '@/app/components/base/chat/chat/citation'
 import { EditTitle } from '@/app/components/app/annotation/edit-annotation-modal/edit-item'
 import type { Emoji } from '@/app/components/tools/types'
 import type { AppData } from '@/models/share'
+import LogoAvatar from '@/app/components/base/logo/logo-embeded-chat-avatar'
 
 type AnswerProps = {
   item: ChatItem
@@ -88,10 +89,10 @@ const Answer: FC<AnswerProps> = ({
   return (
     <div className='flex mb-2 last:mb-0'>
       <div className='shrink-0 relative w-10 h-10'>
-        {
+      {
           answerIcon || (
-            <div className='flex items-center justify-center w-full h-full rounded-full bg-[#d5f5f6] border-[0.5px] border-black/5 text-xl'>
-              🤖
+            <div className='flex items-center justify-center w-full h-full rounded-full bg-white border-[0.5px] border-black/5 text-xl'>
+              <LogoAvatar />
             </div>
           )
         }
